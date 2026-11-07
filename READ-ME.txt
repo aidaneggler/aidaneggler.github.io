@@ -1,9 +1,9 @@
 SPRUCE PORTFOLIO — HOSTING & EDITING
 
-This folder is the complete website: ordinary HTML and CSS, with no install or server required for hosting. The two Unity games are connected later through their own GitHub Pages URLs.
+This folder is the complete website: ordinary HTML and CSS, with no install or server required for hosting. The two Unity games are hosted separately on GitHub Pages and linked from the Projects page.
 
 BEFORE PUBLISHING
-The name Aidan Eggler is already included throughout the site. Review the draft biography and project descriptions. Add your own contact/profile links if desired. The game builds and resume PDF have not been supplied, so their unavailable state is intentional.
+The name Aidan Eggler is already included throughout the site. Review the draft biography and project descriptions. Add your own contact/profile links if desired. The resume PDF has not been supplied, so its unavailable state is intentional.
 
 HOST ON GITHUB PAGES
 1. Create a public GitHub repository named YOURUSERNAME.github.io. Replace YOURUSERNAME with your actual username. If you already use that repository for another site, do not overwrite it without backing it up.
@@ -19,7 +19,7 @@ The portfolio URL will be https://YOURUSERNAME.github.io/ . Public-repository ho
 
 FILES
 index.html              Home page and biography
-projects/index.html     Project descriptions and future game links
+projects/index.html     Project descriptions and links to the playable games
 resume/index.html       Resume page and future PDF link
 assets/portfolio.css    All styles, colors, spacing, and mobile layouts
 favicon.svg             Small spruce tree browser icon
@@ -34,15 +34,14 @@ ADD YOUR RESUME LATER
 Place resume.pdf in the root of this folder. Replace the resume-pending section in resume/index.html with a PDF link, for example:
 <a class="button" href="../resume.pdf" target="_blank" rel="noopener noreferrer">View resume PDF</a>
 
-CONNECT THE UNITY GAMES LATER
-Host each built game in a separate repository, for example spectrum and dungeon. Their URLs would be:
-https://YOURUSERNAME.github.io/spectrum/
-https://YOURUSERNAME.github.io/dungeon/
+UNITY GAME LINKS
+The Projects page links to these separately hosted builds:
+Spectrum: https://aidaneggler.github.io/web-light/
+Dungeon recreation: https://aidaneggler.github.io/web-zelda/
 
-After each game actually loads successfully, replace its pending-build span in projects/index.html with a link:
-<a class="button" href="https://YOURUSERNAME.github.io/spectrum/" target="_blank" rel="noopener noreferrer">Play in browser ↗</a>
+To change a game's address later, update the href on its Play in browser link in projects/index.html.
 
-Use the dungeon URL for the second project. No game files are included in this portfolio download. The actual Unity upload walkthrough should use your Unity version and exported files so compression and size settings can be checked correctly.
+No Unity game files are included in the portfolio itself. Updates to a game build belong in that game's repository.
 
 EDITING THROUGH THE SOURCE PROJECT
 The source project keeps all personal text and links in lib/portfolio.ts. Set name, email, github, linkedin, resumeUrl, and each project's playUrl/sourceUrl there. Rebuild to generate this static folder. The generated HTML can also be maintained independently without the source project.
