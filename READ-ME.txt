@@ -1,0 +1,53 @@
+SPRUCE PORTFOLIO — HOSTING & EDITING
+
+This folder is the complete website: ordinary HTML and CSS, with no install or server required for hosting. The two Unity games are connected later through their own GitHub Pages URLs.
+
+BEFORE PUBLISHING
+The name Aidan Eggler is already included throughout the site. Review the draft biography and project descriptions. Add your own contact/profile links if desired. The game builds and resume PDF have not been supplied, so their unavailable state is intentional.
+
+HOST ON GITHUB PAGES
+1. Create a public GitHub repository named YOURUSERNAME.github.io. Replace YOURUSERNAME with your actual username. If you already use that repository for another site, do not overwrite it without backing it up.
+2. Upload all files and folders in this ZIP to the repository root. index.html must be at the top level. Keep assets/, projects/, and resume/ intact. Do not upload the ZIP itself as the website.
+3. Open the repository's Settings, then Pages.
+4. Under Build and deployment, select Deploy from a branch.
+5. Choose main and /(root), then Save.
+6. Open the URL shown by GitHub. Allow time for the deployment to finish.
+
+An empty .nojekyll file is included. If your computer hides it during upload, create an empty file named .nojekyll directly in the GitHub repository.
+
+The portfolio URL will be https://YOURUSERNAME.github.io/ . Public-repository hosting is available on GitHub Free. A custom domain is optional; you can add one later in Pages settings.
+
+FILES
+index.html              Home page and biography
+projects/index.html     Project descriptions and future game links
+resume/index.html       Resume page and future PDF link
+assets/portfolio.css    All styles, colors, spacing, and mobile layouts
+favicon.svg             Small spruce tree browser icon
+404.html                Page-not-found screen
+.nojekyll               Disables Jekyll processing
+
+This export can be edited directly. To inspect it locally with directory links working, open a terminal in this folder and run:
+python3 -m http.server 8000
+Then open http://localhost:8000 . Do not expect directory navigation to work from a file:// URL.
+
+ADD YOUR RESUME LATER
+Place resume.pdf in the root of this folder. Replace the resume-pending section in resume/index.html with a PDF link, for example:
+<a class="button" href="../resume.pdf" target="_blank" rel="noopener noreferrer">View resume PDF</a>
+
+CONNECT THE UNITY GAMES LATER
+Host each built game in a separate repository, for example spectrum and dungeon. Their URLs would be:
+https://YOURUSERNAME.github.io/spectrum/
+https://YOURUSERNAME.github.io/dungeon/
+
+After each game actually loads successfully, replace its pending-build span in projects/index.html with a link:
+<a class="button" href="https://YOURUSERNAME.github.io/spectrum/" target="_blank" rel="noopener noreferrer">Play in browser ↗</a>
+
+Use the dungeon URL for the second project. No game files are included in this portfolio download. The actual Unity upload walkthrough should use your Unity version and exported files so compression and size settings can be checked correctly.
+
+EDITING THROUGH THE SOURCE PROJECT
+The source project keeps all personal text and links in lib/portfolio.ts. Set name, email, github, linkedin, resumeUrl, and each project's playUrl/sourceUrl there. Rebuild to generate this static folder. The generated HTML can also be maintained independently without the source project.
+
+OFFICIAL REFERENCES
+https://docs.github.com/en/pages/quickstart
+https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
